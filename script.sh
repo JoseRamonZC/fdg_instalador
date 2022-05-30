@@ -5,6 +5,7 @@ if [ $USER == "root" ]; then
     if [ ! -d "/var/www/html/guitarron" ]; then
     echo "No se ha encontrado carpeta de guitarrón, carpeta creada"
     sudo cp -r proyecto /var/www/html/guitarron
+    sudo chmod -R 777 /var/www/html/guitarron
     fi
 
     check=`which symfony`
