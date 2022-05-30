@@ -50,7 +50,7 @@ $env = str_replace("%DB-USER%", $_POST["DB-USER"], $env);
 $env = str_replace("%DB-PASSWORD%", $_POST["DB-PASSWORD"], $env);
 $env = str_replace("%DB-NAME%", $_POST["DB-NAME"], $env);
 
-file_put_contents("prueba.txt", $env);
+file_put_contents(".env", $env);
 
 try {
     $url = "mysql:host=127.0.0.1";

@@ -32,7 +32,7 @@ if [ $USER == "root" ]; then
     check=`which symfony`
     if [ $check ]; then
     url=`hostname -I`
-    echo "Script acabado, servidor Symfony ejecutándose en 10 segundos, visite http://"+url+"/install/ para el asistente de configuración"
+    echo "Script acabado, servidor Symfony ejecutándose en 10 segundos, visite http://"+$url+"/guitarron/ para el asistente de configuración"
     sleep 10
     symfony server:start --dir="/var/www/html/guitarron/"
     else
