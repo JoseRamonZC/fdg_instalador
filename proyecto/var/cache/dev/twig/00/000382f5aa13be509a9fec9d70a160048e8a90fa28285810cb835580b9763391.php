@@ -2080,6 +2080,6 @@ class __TwigTemplate_1e54642e87f54a9e949799c8cc224fe6d0f553f7972f9775c5124a1ff4a
         {{ tree.form_tree_details(childName, childData, forms_by_hash) }}
     {% endfor %}
 {% endmacro %}
-", "@WebProfiler/Collector/form.html.twig", "/var/www/html/proyectoFinal/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
+", "@WebProfiler/Collector/form.html.twig", "/var/www/html/fdg_instalador/proyecto/vendor/symfony/web-profiler-bundle/Resources/views/Collector/form.html.twig");
     }
 }

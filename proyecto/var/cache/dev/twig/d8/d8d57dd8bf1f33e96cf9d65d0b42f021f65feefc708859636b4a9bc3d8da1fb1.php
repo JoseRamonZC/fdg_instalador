@@ -79,6 +79,6 @@ class __TwigTemplate_2966c0b7c17f558b08e297d7a8c97f208920677d16e8c86dc6833cb38dc
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ user.id) }}\">
     <button class=\"btn\">Eliminar</button>
 </form>
-", "user_crud/_delete_form.html.twig", "/var/www/html/symfony/templates/user_crud/_delete_form.html.twig");
+", "user_crud/_delete_form.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/user_crud/_delete_form.html.twig");
     }
 }

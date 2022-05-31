@@ -208,6 +208,6 @@ class __TwigTemplate_83d08be8d44aa4cd8cb50eaa4df9b08e5bccb90b8b30077d5bcc59a4290
         </div>
     </div>
 {% endblock %}
-", "dashboard/index.html.twig", "/var/www/html/proyectoFinal/templates/dashboard/index.html.twig");
+", "dashboard/index.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/dashboard/index.html.twig");
     }
 }

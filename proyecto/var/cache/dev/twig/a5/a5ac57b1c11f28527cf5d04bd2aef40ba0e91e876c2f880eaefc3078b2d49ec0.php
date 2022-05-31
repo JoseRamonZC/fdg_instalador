@@ -155,6 +155,6 @@ class __TwigTemplate_dc828b0085860d8f327f39df5d4b9d32edf891409de3b3bf5d4f01d1b74
 {% block panel %}
     {{ render(controller('web_profiler.controller.router::panelAction', { token: token })) }}
 {% endblock %}
-", "@WebProfiler/Collector/router.html.twig", "/var/www/html/proyectoFinal/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
+", "@WebProfiler/Collector/router.html.twig", "/var/www/html/fdg_instalador/proyecto/vendor/symfony/web-profiler-bundle/Resources/views/Collector/router.html.twig");
     }
 }

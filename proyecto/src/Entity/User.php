@@ -28,8 +28,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface{
     #[Assert\Length(
         min: 5,
         max: 30,
-        minMessage: 'Your password must be at least 5 characters long',
-        maxMessage: 'Your password cannot be longer than 30 characters',
+        minMessage: 'Tu contraseña no puede tener menos de 5 caracteres',
+        maxMessage: 'Tu contraseña no puede tener más de 30 caracteres',
     )]
     private $password;
 
@@ -41,7 +41,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface{
 
     #[ORM\OneToMany(targetEntity: Comentarios::class, mappedBy: "Comentarios")]
     private $comentarios;
-
+    
     #[ORM\OneToMany(targetEntity: Posts::class, mappedBy: "Posts")]
     private $post;
 

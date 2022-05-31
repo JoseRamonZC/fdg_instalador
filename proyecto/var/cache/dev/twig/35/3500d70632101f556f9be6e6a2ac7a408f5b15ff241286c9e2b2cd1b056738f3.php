@@ -236,6 +236,6 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
     <a class=\"mr-3\" href=\"{{ path('app_user_crud_new') }}\">Crear</a>
     <a class=\"mr-3\" href=\"{{ path('app_user_crud_pdf') }}\">Descargar PDF</a>
 {% endblock %}
-", "user_crud/index.html.twig", "/var/www/html/symfony/templates/user_crud/index.html.twig");
+", "user_crud/index.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/user_crud/index.html.twig");
     }
 }

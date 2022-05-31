@@ -192,6 +192,6 @@ class __TwigTemplate_23b2f008400cdf7f3b7c4e1217a9f443089768ebc83c9352945a4290360
     </div>
 </form>
 {% endblock %}
-", "security/login.html.twig", "/var/www/html/symfony/templates/security/login.html.twig");
+", "security/login.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/security/login.html.twig");
     }
 }

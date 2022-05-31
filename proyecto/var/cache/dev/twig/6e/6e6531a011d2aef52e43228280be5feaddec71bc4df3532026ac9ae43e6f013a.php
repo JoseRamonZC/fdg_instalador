@@ -216,6 +216,6 @@ class __TwigTemplate_4cb7becd834bb3ef2dbbd4c18f826f6aa46dfda519843d49e418fe93080
 
     {{ include('user_crud/_delete_form.html.twig') }}
 {% endblock %}
-", "user_crud/show.html.twig", "/var/www/html/symfony/templates/user_crud/show.html.twig");
+", "user_crud/show.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/user_crud/show.html.twig");
     }
 }

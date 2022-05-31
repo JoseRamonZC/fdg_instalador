@@ -157,6 +157,6 @@ class __TwigTemplate_6a557ccd0e2a3fa96e4a10cafbdcf0ba8abe80db4eb86d3d8608161676b
             </div>
         </div>
 {% endblock %}
-", "registro/index.html.twig", "/var/www/html/symfony/templates/registro/index.html.twig");
+", "registro/index.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/registro/index.html.twig");
     }
 }

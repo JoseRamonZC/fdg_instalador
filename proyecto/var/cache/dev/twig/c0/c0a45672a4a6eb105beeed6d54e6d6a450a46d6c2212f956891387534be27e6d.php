@@ -81,6 +81,6 @@ class __TwigTemplate_e3e34f392d28c6905f6d7deb55ce635000843e5c45547d2de7bb1be7951
  */
 #}
 {% extends '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig' %}
-", "@KnpPaginator/Pagination/bootstrap_v5_pagination.html.twig", "/var/www/html/proyectoFinal/vendor/knplabs/knp-paginator-bundle/templates/Pagination/bootstrap_v5_pagination.html.twig");
+", "@KnpPaginator/Pagination/bootstrap_v5_pagination.html.twig", "/var/www/html/fdg_instalador/proyecto/vendor/knplabs/knp-paginator-bundle/templates/Pagination/bootstrap_v5_pagination.html.twig");
     }
 }

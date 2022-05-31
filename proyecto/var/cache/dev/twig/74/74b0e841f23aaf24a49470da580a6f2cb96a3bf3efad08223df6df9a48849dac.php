@@ -226,6 +226,6 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
 
     <a href=\"{{ path('app_posts_crud_new') }}\">Crear</a>
 {% endblock %}
-", "posts_crud/index.html.twig", "/var/www/html/symfony/templates/posts_crud/index.html.twig");
+", "posts_crud/index.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts_crud/index.html.twig");
     }
 }

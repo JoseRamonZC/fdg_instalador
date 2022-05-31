@@ -229,6 +229,6 @@ class __TwigTemplate_a0a377a4460c6bbd53868bdbe54ab95fd68c835b6691773aa40928d42e3
     </div>
 </div>
 {% endblock %}
-", "posts/verPost.html.twig", "/var/www/html/symfony/templates/posts/verPost.html.twig");
+", "posts/verPost.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts/verPost.html.twig");
     }
 }
