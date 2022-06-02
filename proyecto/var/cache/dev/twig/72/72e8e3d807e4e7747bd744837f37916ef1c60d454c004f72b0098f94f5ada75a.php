@@ -63,8 +63,11 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
       ";
         // line 15
         $this->displayBlock('body', $context, $blocks);
-        // line 64
-        echo "    </body>
+        // line 66
+        echo "        <footer>
+        Página de práctica I.E.S. Leopoldo Queipo
+      </footer>
+    </body>
 </html>
 ";
         
@@ -151,13 +154,13 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
             echo "                ";
             if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 26, $this->source); })()), "request", [], "any", false, false, false, 26), "get", [0 => "_route"], "method", false, false, false, 26) == "RegistrarPost")) {
                 // line 27
-                echo "                  <a class=\"nav-link a active\" aria-current=\"page\" href=\"";
+                echo "                  <a class=\"nav-link nv active\" aria-current=\"page\" href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("RegistrarPost");
                 echo "\">Crear Post</a>
                   ";
             } else {
                 // line 29
-                echo "                  <a class=\"nav-link a\" aria-current=\"page\" href=\"";
+                echo "                  <a class=\"nav-link nv\" aria-current=\"page\" href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("RegistrarPost");
                 echo "\">Crear Post</a>
                   ";
@@ -169,13 +172,13 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
             // line 33
             if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "request", [], "any", false, false, false, 33), "get", [0 => "_route"], "method", false, false, false, 33) == "misPosts")) {
                 // line 34
-                echo "                  <a class=\"nav-link a ml-3 mr-5 active\" href=\"";
+                echo "                  <a class=\"nav-link nv ml-3 mr-5 active\" href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("misPosts");
                 echo "\">Mis Posts</a>
                   ";
             } else {
                 // line 36
-                echo "                  <a class=\"nav-link a ml-3 mr-3\" href=\"";
+                echo "                  <a class=\"nav-link nv ml-3 mr-3\" href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("misPosts");
                 echo "\">Mis Posts</a>
                   ";
@@ -190,17 +193,17 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
                     <a href=\"";
             // line 43
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\"><button class=\"boton-nav a\">Logout</button></a>
+            echo "\"><button class=\"boton-nav nv mr-3\">Logout</button></a>
                   ";
         } else {
             // line 45
             echo "                    <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\"><button class=\"boton-nav a mr-3\">Login</button></a>
+            echo "\"><button class=\"boton-nav nv mr-3\">Login</button></a>
                     <a href=\"";
             // line 46
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_registro");
-            echo "\"><button class=\"boton-nav a mr-3\">Registrate</button></a>
+            echo "\"><button class=\"boton-nav nv mr-3\">Registrate</button></a>
                   ";
         }
         // line 48
@@ -213,27 +216,29 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
             // line 52
             echo "                  <div class=\"btn-group\" role=\"group\">
-                        <button type=\"button\" class=\"btn-primary ml-3\" onclick=\"window.location.href='";
+                      <a href=\"";
             // line 53
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_index");
-            echo "'\">📰</button>
-                        <button type=\"button\" class=\"btn-primary\" onclick=\"window.location.href='";
+            echo "\"><button class=\"boton-nav nv mr-3\">Posts</button></a>
+                      <a href=\"";
             // line 54
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_index");
-            echo "'\">🙍‍♂️</button>
-                  </div>
+            echo "\"><button class=\"boton-nav nv mr-3\">Usuarios</button></a>
+                        ";
+            // line 57
+            echo "                  </div>
                 ";
         }
-        // line 57
+        // line 59
         echo "            </div>
           </div>
         </nav> 
           <script src=\"";
-        // line 60
+        // line 62
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"></script>
           <script src=\"";
-        // line 61
+        // line 63
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bootstrap/js/bootstrap.js"), "html", null, true);
         echo "\"></script>
         
@@ -253,7 +258,7 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
 
     public function getDebugInfo()
     {
-        return array (  237 => 61,  233 => 60,  228 => 57,  222 => 54,  218 => 53,  215 => 52,  213 => 51,  210 => 50,  207 => 48,  202 => 46,  197 => 45,  192 => 43,  188 => 41,  184 => 38,  178 => 36,  172 => 34,  170 => 33,  166 => 31,  160 => 29,  154 => 27,  151 => 26,  149 => 25,  139 => 18,  135 => 16,  125 => 15,  113 => 10,  108 => 9,  98 => 8,  79 => 5,  67 => 64,  65 => 15,  60 => 12,  57 => 8,  52 => 5,  46 => 1,);
+        return array (  242 => 63,  238 => 62,  233 => 59,  229 => 57,  225 => 54,  221 => 53,  218 => 52,  216 => 51,  213 => 50,  210 => 48,  205 => 46,  200 => 45,  195 => 43,  191 => 41,  187 => 38,  181 => 36,  175 => 34,  173 => 33,  169 => 31,  163 => 29,  157 => 27,  154 => 26,  152 => 25,  142 => 18,  138 => 16,  128 => 15,  116 => 10,  111 => 9,  101 => 8,  82 => 5,  67 => 66,  65 => 15,  60 => 12,  57 => 8,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -284,34 +289,36 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
                 <li class=\"nav-item ml-3\">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                 {% if app.request.get('_route') == \"RegistrarPost\" %}
-                  <a class=\"nav-link a active\" aria-current=\"page\" href=\"{{ path('RegistrarPost') }}\">Crear Post</a>
+                  <a class=\"nav-link nv active\" aria-current=\"page\" href=\"{{ path('RegistrarPost') }}\">Crear Post</a>
                   {% else %}
-                  <a class=\"nav-link a\" aria-current=\"page\" href=\"{{ path('RegistrarPost') }}\">Crear Post</a>
+                  <a class=\"nav-link nv\" aria-current=\"page\" href=\"{{ path('RegistrarPost') }}\">Crear Post</a>
                   {% endif %}
                 </li>
                 <li class=\"nav-item\">
                 {% if app.request.get('_route') == \"misPosts\" %}
-                  <a class=\"nav-link a ml-3 mr-5 active\" href=\"{{ path('misPosts') }}\">Mis Posts</a>
+                  <a class=\"nav-link nv ml-3 mr-5 active\" href=\"{{ path('misPosts') }}\">Mis Posts</a>
                   {% else %}
-                  <a class=\"nav-link a ml-3 mr-3\" href=\"{{ path('misPosts') }}\">Mis Posts</a>
+                  <a class=\"nav-link nv ml-3 mr-3\" href=\"{{ path('misPosts') }}\">Mis Posts</a>
                   {% endif %}
                 </li>
 
                 {# Comprobamos que el usuario este registrado #}
 
                   
-                    <a href=\"{{ path('app_logout') }}\"><button class=\"boton-nav a\">Logout</button></a>
+                    <a href=\"{{ path('app_logout') }}\"><button class=\"boton-nav nv mr-3\">Logout</button></a>
                   {% else %}
-                    <a href=\"{{ path('app_login') }}\"><button class=\"boton-nav a mr-3\">Login</button></a>
-                    <a href=\"{{ path('app_registro') }}\"><button class=\"boton-nav a mr-3\">Registrate</button></a>
+                    <a href=\"{{ path('app_login') }}\"><button class=\"boton-nav nv mr-3\">Login</button></a>
+                    <a href=\"{{ path('app_registro') }}\"><button class=\"boton-nav nv mr-3\">Registrate</button></a>
                   {% endif %}
 
                 {# Comprobamos que el usuario sea admin #}
                 
                 {% if is_granted('ROLE_ADMIN') %}
                   <div class=\"btn-group\" role=\"group\">
-                        <button type=\"button\" class=\"btn-primary ml-3\" onclick=\"window.location.href='{{ path('app_posts_crud_index') }}'\">📰</button>
-                        <button type=\"button\" class=\"btn-primary\" onclick=\"window.location.href='{{ path('app_user_crud_index') }}'\">🙍‍♂️</button>
+                      <a href=\"{{ path('app_posts_crud_index') }}\"><button class=\"boton-nav nv mr-3\">Posts</button></a>
+                      <a href=\"{{ path('app_user_crud_index') }}\"><button class=\"boton-nav nv mr-3\">Usuarios</button></a>
+                        {# <button type=\"button\" class=\"btn-primary ml-3\" onclick=\"window.location.href='{{ path('app_posts_crud_index') }}'\">Posts</button>
+                        <button type=\"button\" class=\"btn-primary\" onclick=\"window.location.href='{{ path('app_user_crud_index') }}'\">Usuarios</button> #}
                   </div>
                 {% endif %}
             </div>
@@ -321,6 +328,9 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
           <script src=\"{{ asset('bootstrap/js/bootstrap.js') }}\"></script>
         
         {% endblock %}
+        <footer>
+        Página de práctica I.E.S. Leopoldo Queipo
+      </footer>
     </body>
 </html>
 ", "base.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/base.html.twig");

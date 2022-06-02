@@ -91,14 +91,14 @@ class __TwigTemplate_83d08be8d44aa4cd8cb50eaa4df9b08e5bccb90b8b30077d5bcc59a4290
         echo "
     <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-md-8 cursor\">
+            <div class=\"col-md-10 cursor \">
              ";
         // line 11
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 11, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
             // line 12
-            echo "                <div class=\"bg-white rounded p-3 my-3\"  onclick=\"window.location.href='";
+            echo "                <div class=\"bg-white rounded p-3 my-3 centrar\"  onclick=\"window.location.href='";
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("verPost", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 12)]), "html", null, true);
             echo "'\">
                     <div class=\"d-flex bd-highlight\">
@@ -180,9 +180,9 @@ class __TwigTemplate_83d08be8d44aa4cd8cb50eaa4df9b08e5bccb90b8b30077d5bcc59a4290
 {{ parent() }}
     <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-md-8 cursor\">
+            <div class=\"col-md-10 cursor \">
              {% for post in pagination %}
-                <div class=\"bg-white rounded p-3 my-3\"  onclick=\"window.location.href='{{ path('verPost',{id:post.id}) }}'\">
+                <div class=\"bg-white rounded p-3 my-3 centrar\"  onclick=\"window.location.href='{{ path('verPost',{id:post.id}) }}'\">
                     <div class=\"d-flex bd-highlight\">
                         <div class=\"p-2 flex-grow-1 bd-highlight\">
                             <h3>{{post.titulo}}</h3>

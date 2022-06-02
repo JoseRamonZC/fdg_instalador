@@ -86,16 +86,21 @@ class __TwigTemplate_155b1702bca4fb761b15990fbfbe0dabb72cf27718720a4f5b0a7eaf8b8
 
         // line 6
         echo "    <h1>Crea un Posts</h1>
-
+<div class=\"container h-100\">
+            <div class=\"row h-100 justify-content-center align-items-center\">
+                <div class=\"col-8 bg-white rounded my-3 p-5\">
     ";
-        // line 8
+        // line 10
         echo twig_include($this->env, $context, "posts_crud/_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 12
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_index");
         echo "\">Volver</a>
+    </div>
+            </div>
+        </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -117,7 +122,7 @@ class __TwigTemplate_155b1702bca4fb761b15990fbfbe0dabb72cf27718720a4f5b0a7eaf8b8
 
     public function getDebugInfo()
     {
-        return array (  97 => 10,  92 => 8,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  99 => 12,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -128,11 +133,16 @@ class __TwigTemplate_155b1702bca4fb761b15990fbfbe0dabb72cf27718720a4f5b0a7eaf8b8
 
 {% block body %}
     <h1>Crea un Posts</h1>
-
+<div class=\"container h-100\">
+            <div class=\"row h-100 justify-content-center align-items-center\">
+                <div class=\"col-8 bg-white rounded my-3 p-5\">
     {{ include('posts_crud/_form.html.twig') }}
 
     <a href=\"{{ path('app_posts_crud_index') }}\">Volver</a>
+    </div>
+            </div>
+        </div>
 {% endblock %}
-", "posts_crud/new.html.twig", "/var/www/html/symfony/templates/posts_crud/new.html.twig");
+", "posts_crud/new.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts_crud/new.html.twig");
     }
 }

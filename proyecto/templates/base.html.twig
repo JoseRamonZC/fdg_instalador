@@ -24,34 +24,36 @@
                 <li class="nav-item ml-3">
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                 {% if app.request.get('_route') == "RegistrarPost" %}
-                  <a class="nav-link a active" aria-current="page" href="{{ path('RegistrarPost') }}">Crear Post</a>
+                  <a class="nav-link nv active" aria-current="page" href="{{ path('RegistrarPost') }}">Crear Post</a>
                   {% else %}
-                  <a class="nav-link a" aria-current="page" href="{{ path('RegistrarPost') }}">Crear Post</a>
+                  <a class="nav-link nv" aria-current="page" href="{{ path('RegistrarPost') }}">Crear Post</a>
                   {% endif %}
                 </li>
                 <li class="nav-item">
                 {% if app.request.get('_route') == "misPosts" %}
-                  <a class="nav-link a ml-3 mr-5 active" href="{{ path('misPosts') }}">Mis Posts</a>
+                  <a class="nav-link nv ml-3 mr-5 active" href="{{ path('misPosts') }}">Mis Posts</a>
                   {% else %}
-                  <a class="nav-link a ml-3 mr-3" href="{{ path('misPosts') }}">Mis Posts</a>
+                  <a class="nav-link nv ml-3 mr-3" href="{{ path('misPosts') }}">Mis Posts</a>
                   {% endif %}
                 </li>
 
                 {# Comprobamos que el usuario este registrado #}
 
                   
-                    <a href="{{ path('app_logout') }}"><button class="boton-nav a">Logout</button></a>
+                    <a href="{{ path('app_logout') }}"><button class="boton-nav nv mr-3">Logout</button></a>
                   {% else %}
-                    <a href="{{ path('app_login') }}"><button class="boton-nav a mr-3">Login</button></a>
-                    <a href="{{ path('app_registro') }}"><button class="boton-nav a mr-3">Registrate</button></a>
+                    <a href="{{ path('app_login') }}"><button class="boton-nav nv mr-3">Login</button></a>
+                    <a href="{{ path('app_registro') }}"><button class="boton-nav nv mr-3">Registrate</button></a>
                   {% endif %}
 
                 {# Comprobamos que el usuario sea admin #}
                 
                 {% if is_granted('ROLE_ADMIN') %}
                   <div class="btn-group" role="group">
-                        <button type="button" class="btn-primary ml-3" onclick="window.location.href='{{ path('app_posts_crud_index') }}'">📰</button>
-                        <button type="button" class="btn-primary" onclick="window.location.href='{{ path('app_user_crud_index') }}'">🙍‍♂️</button>
+                      <a href="{{ path('app_posts_crud_index') }}"><button class="boton-nav nv mr-3">Posts</button></a>
+                      <a href="{{ path('app_user_crud_index') }}"><button class="boton-nav nv mr-3">Usuarios</button></a>
+                        {# <button type="button" class="btn-primary ml-3" onclick="window.location.href='{{ path('app_posts_crud_index') }}'">Posts</button>
+                        <button type="button" class="btn-primary" onclick="window.location.href='{{ path('app_user_crud_index') }}'">Usuarios</button> #}
                   </div>
                 {% endif %}
             </div>
@@ -61,5 +63,8 @@
           <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
         
         {% endblock %}
+        <footer>
+        Página de práctica I.E.S. Leopoldo Queipo
+      </footer>
     </body>
 </html>

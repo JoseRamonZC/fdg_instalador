@@ -1,0 +1,54 @@
+<?php //b7c6a12c4dfe39f6ee864ddb316b8837
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'dpid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT p0_.id AS id_0, p0_.titulo AS titulo_1, p0_.foto AS foto_2, p0_.fecha_publicacion AS fecha_publicacion_3, u1_.nombre AS nombre_4 FROM posts p0_ INNER JOIN user u1_ ON p0_.user_id = u1_.id WHERE p0_.id IN (?)',
+            ],
+        ],
+        'stdClass' => [
+            'scalarMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'titulo_1' => 'titulo',
+                    'foto_2' => 'foto',
+                    'fecha_publicacion_3' => 'fecha_publicacion',
+                    'nombre_4' => 'nombre',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'id_0' => 'integer',
+                    'titulo_1' => 'string',
+                    'foto_2' => 'string',
+                    'fecha_publicacion_3' => 'datetime',
+                    'nombre_4' => 'string',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

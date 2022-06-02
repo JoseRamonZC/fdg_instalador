@@ -40,14 +40,14 @@ class __TwigTemplate_2966c0b7c17f558b08e297d7a8c97f208920677d16e8c86dc6833cb38dc
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user_crud/_delete_form.html.twig"));
 
         // line 1
-        echo "<form method=\"post\" action=\"";
+        echo "<form class=\"d-inline\" method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
         echo "\" onsubmit=\"return confirm('¿Seguro que quieres borrar este usuario?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Eliminar</button>
+    <button class=\"boton\">Eliminar</button>
 </form>
 ";
         
@@ -75,9 +75,9 @@ class __TwigTemplate_2966c0b7c17f558b08e297d7a8c97f208920677d16e8c86dc6833cb38dc
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('app_user_crud_delete', {'id': user.id}) }}\" onsubmit=\"return confirm('¿Seguro que quieres borrar este usuario?');\">
+        return new Source("<form class=\"d-inline\" method=\"post\" action=\"{{ path('app_user_crud_delete', {'id': user.id}) }}\" onsubmit=\"return confirm('¿Seguro que quieres borrar este usuario?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ user.id) }}\">
-    <button class=\"btn\">Eliminar</button>
+    <button class=\"boton\">Eliminar</button>
 </form>
 ", "user_crud/_delete_form.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/user_crud/_delete_form.html.twig");
     }

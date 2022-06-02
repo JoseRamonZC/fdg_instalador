@@ -86,68 +86,73 @@ class __TwigTemplate_4cb7becd834bb3ef2dbbd4c18f826f6aa46dfda519843d49e418fe93080
 
         // line 6
         echo "    <h1>User</h1>
-
+<div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12), "html", null, true);
+        // line 14
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 14, $this->source); })()), "id", [], "any", false, false, false, 14), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Email</th>
                 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 16, $this->source); })()), "email", [], "any", false, false, false, 16), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 18, $this->source); })()), "email", [], "any", false, false, false, 18), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Roles</th>
                 <td>";
-        // line 20
-        ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 20, $this->source); })()), "roles", [], "any", false, false, false, 20)) ? (print (twig_escape_filter($this->env, json_encode(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 20, $this->source); })()), "roles", [], "any", false, false, false, 20)), "html", null, true))) : (print ("")));
+        // line 22
+        ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 22, $this->source); })()), "roles", [], "any", false, false, false, 22)) ? (print (twig_escape_filter($this->env, json_encode(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 22, $this->source); })()), "roles", [], "any", false, false, false, 22)), "html", null, true))) : (print ("")));
         echo "</td>
             </tr>
             <tr>
                 <th>Password</th>
                 <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 24, $this->source); })()), "password", [], "any", false, false, false, 24), "html", null, true);
+        // line 26
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 26, $this->source); })()), "password", [], "any", false, false, false, 26), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Baneado</th>
                 <td>";
-        // line 28
-        echo ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 28, $this->source); })()), "baneado", [], "any", false, false, false, 28)) ? ("Yes") : ("No"));
+        // line 30
+        echo ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 30, $this->source); })()), "baneado", [], "any", false, false, false, 30)) ? ("Yes") : ("No"));
         echo "</td>
             </tr>
             <tr>
                 <th>Nombre</th>
                 <td>";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 32, $this->source); })()), "nombre", [], "any", false, false, false, 32), "html", null, true);
+        // line 34
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 34, $this->source); })()), "nombre", [], "any", false, false, false, 34), "html", null, true);
         echo "</td>
             </tr>
         </tbody>
     </table>
 
-    <a href=\"";
-        // line 37
+    <a class=\"mr3\" href=\"";
+        // line 39
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_index");
         echo "\">Volver</a>
 
-    <a href=\"";
-        // line 39
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 39, $this->source); })()), "id", [], "any", false, false, false, 39)]), "html", null, true);
+    <a class=\"mr3\" href=\"";
+        // line 41
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 41, $this->source); })()), "id", [], "any", false, false, false, 41)]), "html", null, true);
         echo "\">Editar</a>
 
     ";
-        // line 41
+        // line 43
         echo twig_include($this->env, $context, "user_crud/_delete_form.html.twig");
         echo "
+    </div>
+            </div>
+        </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -169,7 +174,7 @@ class __TwigTemplate_4cb7becd834bb3ef2dbbd4c18f826f6aa46dfda519843d49e418fe93080
 
     public function getDebugInfo()
     {
-        return array (  149 => 41,  144 => 39,  139 => 37,  131 => 32,  124 => 28,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  151 => 43,  146 => 41,  141 => 39,  133 => 34,  126 => 30,  119 => 26,  112 => 22,  105 => 18,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -180,7 +185,9 @@ class __TwigTemplate_4cb7becd834bb3ef2dbbd4c18f826f6aa46dfda519843d49e418fe93080
 
 {% block body %}
     <h1>User</h1>
-
+<div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <tbody>
             <tr>
@@ -210,11 +217,14 @@ class __TwigTemplate_4cb7becd834bb3ef2dbbd4c18f826f6aa46dfda519843d49e418fe93080
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_user_crud_index') }}\">Volver</a>
+    <a class=\"mr3\" href=\"{{ path('app_user_crud_index') }}\">Volver</a>
 
-    <a href=\"{{ path('app_user_crud_edit', {'id': user.id}) }}\">Editar</a>
+    <a class=\"mr3\" href=\"{{ path('app_user_crud_edit', {'id': user.id}) }}\">Editar</a>
 
     {{ include('user_crud/_delete_form.html.twig') }}
+    </div>
+            </div>
+        </div>
 {% endblock %}
 ", "user_crud/show.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/user_crud/show.html.twig");
     }

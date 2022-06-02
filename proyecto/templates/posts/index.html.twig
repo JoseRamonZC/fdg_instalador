@@ -8,6 +8,13 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 {{ parent() }}
-    {{form(form)}}
+    <div class="container h-100">
+            <div class="row h-100 justify-content-center align-items-center">
+                <div class="col-8 bg-white rounded my-3 p-5">
+                    <h1>Registro</h1>
+                    {{form(form)}}
+                </div>
+            </div>
+        </div>
 </div>
 {% endblock %}

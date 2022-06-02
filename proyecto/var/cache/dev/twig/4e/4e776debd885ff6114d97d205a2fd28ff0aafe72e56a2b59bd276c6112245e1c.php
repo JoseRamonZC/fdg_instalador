@@ -40,14 +40,14 @@ class __TwigTemplate_31f0b14053d352c250441eeeebe579c47b4f55548295d9eb93a77bd5443
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "posts_crud/_delete_form.html.twig"));
 
         // line 1
-        echo "<form method=\"post\" action=\"";
+        echo "<form class=\"d-inline\" method=\"post\" action=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 1, $this->source); })()), "id", [], "any", false, false, false, 1)]), "html", null, true);
         echo "\" onsubmit=\"return confirm('¿Quieres eliminar este post?');\">
     <input type=\"hidden\" name=\"_token\" value=\"";
         // line 2
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         echo "\">
-    <button class=\"btn\">Eliminar</button>
+    <button class=\"boton\">Eliminar</button>
 </form>
 ";
         
@@ -75,10 +75,10 @@ class __TwigTemplate_31f0b14053d352c250441eeeebe579c47b4f55548295d9eb93a77bd5443
 
     public function getSourceContext()
     {
-        return new Source("<form method=\"post\" action=\"{{ path('app_posts_crud_delete', {'id': post.id}) }}\" onsubmit=\"return confirm('¿Quieres eliminar este post?');\">
+        return new Source("<form class=\"d-inline\" method=\"post\" action=\"{{ path('app_posts_crud_delete', {'id': post.id}) }}\" onsubmit=\"return confirm('¿Quieres eliminar este post?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ post.id) }}\">
-    <button class=\"btn\">Eliminar</button>
+    <button class=\"boton\">Eliminar</button>
 </form>
-", "posts_crud/_delete_form.html.twig", "/var/www/html/symfony/templates/posts_crud/_delete_form.html.twig");
+", "posts_crud/_delete_form.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts_crud/_delete_form.html.twig");
     }
 }

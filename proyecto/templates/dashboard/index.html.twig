@@ -7,9 +7,9 @@
 {{ parent() }}
     <div class="container">
         <div class="row">
-            <div class="col-md-8 cursor">
+            <div class="col-md-10 cursor ">
              {% for post in pagination %}
-                <div class="bg-white rounded p-3 my-3"  onclick="window.location.href='{{ path('verPost',{id:post.id}) }}'">
+                <div class="bg-white rounded p-3 my-3 centrar"  onclick="window.location.href='{{ path('verPost',{id:post.id}) }}'">
                     <div class="d-flex bd-highlight">
                         <div class="p-2 flex-grow-1 bd-highlight">
                             <h3>{{post.titulo}}</h3>

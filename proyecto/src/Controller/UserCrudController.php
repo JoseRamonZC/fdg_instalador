@@ -18,7 +18,7 @@ use Dompdf\Options;
 class UserCrudController extends AbstractController
 {
     #[Route('/', name: 'app_user_crud_index', methods: ['GET'])]
-    public function index(UserRepository $userRepository): Response
+    public function index(UserRepository $userRepository, Request $request): Response
     {
         return $this->render('user_crud/index.html.twig', [
             'users' => $userRepository->findAll(),
@@ -52,7 +52,7 @@ class UserCrudController extends AbstractController
     }
 
     #[Route('/new', name: 'app_user_crud_new', methods: ['GET', 'POST'])]
-    public function new(UserRepository $userRepository): Response
+    public function new(UserRepository $userRepository, Request $request): Response
     {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);

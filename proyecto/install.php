@@ -73,7 +73,7 @@ catch (PDOException $e) {
 try {
     $conn->exec(file_get_contents('db.sql'));
     echo "<p>Estructura y admin importados<p>";
-    echo "<h3>IP: http://".$_SERVER['SERVER_NAME'].":8000/</h3>";
+    echo "<h3>Diríjase a IP: <a href=\"http://".$_SERVER['SERVER_NAME'].":8000/\"></a>http://".$_SERVER['SERVER_NAME'].":8000/</h3>";
 }
 catch (PDOException $e) {
     return "Error creando la estructura: " . $e->getMessage();

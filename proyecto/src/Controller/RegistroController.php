@@ -30,8 +30,6 @@ class RegistroController extends AbstractController
             $user->setPassword($hashedPassword);
             $em->persist($user);
             $em->flush();
-            // $this->addFlash('exito', User::REGISTRO_EXITOSO );
-            // return $this->redirect('/');
         }
         
         

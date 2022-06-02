@@ -233,6 +233,6 @@ class __TwigTemplate_d00f49061fe526d39aa974cd43059d4c0d5ac817ed63945e120fe246ad7
     <script src=\"{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}\"></script>
     <script src=\"{{ asset('js/ajax-call.js') }}\"></script>
 {% endblock %}
-", "posts/misPosts.html.twig", "/var/www/html/symfony/templates/posts/misPosts.html.twig");
+", "posts/misPosts.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts/misPosts.html.twig");
     }
 }

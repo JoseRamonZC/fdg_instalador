@@ -86,7 +86,9 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
 
         // line 6
         echo "    <h1>User index</h1>
-
+<div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <thead>
             <tr>
@@ -100,41 +102,41 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
         </thead>
         <tbody>
         ";
-        // line 20
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 21
+            // line 23
             echo "            <tr>
                 <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 22), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                <td>";
             // line 24
-            ((twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 24)) ? (print (twig_escape_filter($this->env, json_encode(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 24)), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>";
             // line 25
-            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "baneado", [], "any", false, false, false, 25)) ? ("Yes") : ("No"));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nombre", [], "any", false, false, false, 26), "html", null, true);
+            ((twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 26)) ? (print (twig_escape_filter($this->env, json_encode(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 26)), "html", null, true))) : (print ("")));
+            echo "</td>
+                <td>";
+            // line 27
+            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "baneado", [], "any", false, false, false, 27)) ? ("Yes") : ("No"));
+            echo "</td>
+                <td>";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nombre", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\">Ver</a>
                     <a href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\">Editar</a>
                 </td>
             </tr>
@@ -142,7 +144,7 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 33
+            // line 35
             echo "            <tr>
                 <td colspan=\"7\">No hay ningún usuario</td>
             </tr>
@@ -151,22 +153,25 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 39
         echo "        </tbody>
     </table>
 
     <a class=\"mr-3\" href=\"";
-        // line 40
+        // line 42
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dashboard");
         echo "\">Volver</a>
     <a class=\"mr-3\" href=\"";
-        // line 41
+        // line 43
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_new");
         echo "\">Crear</a>
     <a class=\"mr-3\" href=\"";
-        // line 42
+        // line 44
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_pdf");
         echo "\">Descargar PDF</a>
+    </div>
+            </div>
+        </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -188,7 +193,7 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
 
     public function getDebugInfo()
     {
-        return array (  168 => 42,  164 => 41,  160 => 40,  155 => 37,  146 => 33,  137 => 29,  133 => 28,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  170 => 44,  166 => 43,  162 => 42,  157 => 39,  148 => 35,  139 => 31,  135 => 30,  130 => 28,  126 => 27,  122 => 26,  118 => 25,  114 => 24,  111 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -199,7 +204,9 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
 
 {% block body %}
     <h1>User index</h1>
-
+<div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <thead>
             <tr>
@@ -235,6 +242,9 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
     <a class=\"mr-3\" href=\"{{ path('app_dashboard') }}\">Volver</a>
     <a class=\"mr-3\" href=\"{{ path('app_user_crud_new') }}\">Crear</a>
     <a class=\"mr-3\" href=\"{{ path('app_user_crud_pdf') }}\">Descargar PDF</a>
+    </div>
+            </div>
+        </div>
 {% endblock %}
 ", "user_crud/index.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/user_crud/index.html.twig");
     }

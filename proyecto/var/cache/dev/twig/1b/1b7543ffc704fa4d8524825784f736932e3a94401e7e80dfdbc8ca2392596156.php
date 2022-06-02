@@ -93,10 +93,17 @@ class __TwigTemplate_685df99c20316fe17d7f4d84b62a98ba8ee3902f97db525fe8d63e029dd
         // line 10
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-    ";
-        // line 11
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 11, $this->source); })()), 'form');
+    <div class=\"container h-100\">
+            <div class=\"row h-100 justify-content-center align-items-center\">
+                <div class=\"col-8 bg-white rounded my-3 p-5\">
+                    <h1>Registro</h1>
+                    ";
+        // line 15
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 15, $this->source); })()), 'form');
         echo "
+                </div>
+            </div>
+        </div>
 </div>
 ";
         
@@ -119,7 +126,7 @@ class __TwigTemplate_685df99c20316fe17d7f4d84b62a98ba8ee3902f97db525fe8d63e029dd
 
     public function getDebugInfo()
     {
-        return array (  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  102 => 15,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -134,7 +141,14 @@ class __TwigTemplate_685df99c20316fe17d7f4d84b62a98ba8ee3902f97db525fe8d63e029dd
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 {{ parent() }}
-    {{form(form)}}
+    <div class=\"container h-100\">
+            <div class=\"row h-100 justify-content-center align-items-center\">
+                <div class=\"col-8 bg-white rounded my-3 p-5\">
+                    <h1>Registro</h1>
+                    {{form(form)}}
+                </div>
+            </div>
+        </div>
 </div>
 {% endblock %}
 ", "posts/index.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts/index.html.twig");

@@ -86,7 +86,9 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
 
         // line 6
         echo "    <h1>Posts index</h1>
-
+    <div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <thead>
             <tr>
@@ -100,41 +102,41 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
         </thead>
         <tbody>
         ";
-        // line 20
+        // line 22
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["posts"]) || array_key_exists("posts", $context) ? $context["posts"] : (function () { throw new RuntimeError('Variable "posts" does not exist.', 22, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["post"]) {
-            // line 21
+            // line 23
             echo "            <tr>
                 <td>";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 22), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "titulo", [], "any", false, false, false, 23), "html", null, true);
-            echo "</td>
-                <td>";
             // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "foto", [], "any", false, false, false, 24), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>";
             // line 25
-            ((twig_get_attribute($this->env, $this->source, $context["post"], "fechaPublicacion", [], "any", false, false, false, 25)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "fechaPublicacion", [], "any", false, false, false, 25), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "titulo", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "contenido", [], "any", false, false, false, 26), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "foto", [], "any", false, false, false, 26), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 27
+            ((twig_get_attribute($this->env, $this->source, $context["post"], "fechaPublicacion", [], "any", false, false, false, 27)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "fechaPublicacion", [], "any", false, false, false, 27), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+            echo "</td>
+                <td>";
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["post"], "contenido", [], "any", false, false, false, 28), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 28
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_show", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 28)]), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_show", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\">Ver</a>
                     <a href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["post"], "id", [], "any", false, false, false, 31)]), "html", null, true);
             echo "\">Editar</a>
                 </td>
             </tr>
@@ -142,7 +144,7 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 33
+            // line 35
             echo "            <tr>
                 <td colspan=\"6\">No hay ningún post</td>
             </tr>
@@ -151,14 +153,17 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['post'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 39
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 40
+        // line 42
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_new");
         echo "\">Crear</a>
+        </div>
+            </div>
+        </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -180,7 +185,7 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
 
     public function getDebugInfo()
     {
-        return array (  160 => 40,  155 => 37,  146 => 33,  137 => 29,  133 => 28,  128 => 26,  124 => 25,  120 => 24,  116 => 23,  112 => 22,  109 => 21,  104 => 20,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  162 => 42,  157 => 39,  148 => 35,  139 => 31,  135 => 30,  130 => 28,  126 => 27,  122 => 26,  118 => 25,  114 => 24,  111 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -191,7 +196,9 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
 
 {% block body %}
     <h1>Posts index</h1>
-
+    <div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <thead>
             <tr>
@@ -225,6 +232,9 @@ class __TwigTemplate_03403d1c2fab48c5e637755ca173e78e5d36ff63d70cc1578a55719dd2c
     </table>
 
     <a href=\"{{ path('app_posts_crud_new') }}\">Crear</a>
+        </div>
+            </div>
+        </div>
 {% endblock %}
 ", "posts_crud/index.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts_crud/index.html.twig");
     }

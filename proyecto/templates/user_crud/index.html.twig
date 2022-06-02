@@ -4,7 +4,9 @@
 
 {% block body %}
     <h1>User index</h1>
-
+<div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-12 bg-white rounded my-3 p-5">
     <table class="table">
         <thead>
             <tr>
@@ -40,4 +42,7 @@
     <a class="mr-3" href="{{ path('app_dashboard') }}">Volver</a>
     <a class="mr-3" href="{{ path('app_user_crud_new') }}">Crear</a>
     <a class="mr-3" href="{{ path('app_user_crud_pdf') }}">Descargar PDF</a>
+    </div>
+            </div>
+        </div>
 {% endblock %}

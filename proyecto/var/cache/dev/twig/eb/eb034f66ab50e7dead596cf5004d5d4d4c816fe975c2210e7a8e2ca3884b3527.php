@@ -86,61 +86,66 @@ class __TwigTemplate_cd089278cfa1bcf3733c5851ef0c098e21537fc457c579339ce90c0a267
 
         // line 6
         echo "    <h1>Posts</h1>
-
+<div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <tbody>
             <tr>
                 <th>Id</th>
                 <td>";
-        // line 12
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12), "html", null, true);
+        // line 14
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 14, $this->source); })()), "id", [], "any", false, false, false, 14), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Título</th>
                 <td>";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 16, $this->source); })()), "titulo", [], "any", false, false, false, 16), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 18, $this->source); })()), "titulo", [], "any", false, false, false, 18), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Foto</th>
                 <td>";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 20, $this->source); })()), "foto", [], "any", false, false, false, 20), "html", null, true);
+        // line 22
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 22, $this->source); })()), "foto", [], "any", false, false, false, 22), "html", null, true);
         echo "</td>
             </tr>
             <tr>
                 <th>Fecha publicacion</th>
                 <td>";
-        // line 24
-        ((twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 24, $this->source); })()), "fechaPublicacion", [], "any", false, false, false, 24)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 24, $this->source); })()), "fechaPublicacion", [], "any", false, false, false, 24), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+        // line 26
+        ((twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 26, $this->source); })()), "fechaPublicacion", [], "any", false, false, false, 26)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 26, $this->source); })()), "fechaPublicacion", [], "any", false, false, false, 26), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
         echo "</td>
             </tr>
             <tr>
                 <th>Contenido</th>
                 <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 28, $this->source); })()), "contenido", [], "any", false, false, false, 28), "html", null, true);
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 30, $this->source); })()), "contenido", [], "any", false, false, false, 30), "html", null, true);
         echo "</td>
             </tr>
         </tbody>
     </table>
 
-    <a href=\"";
-        // line 33
+    <a class=\"mr3\" href=\"";
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_index");
         echo "\">Volver</a>
 
-    <a href=\"";
-        // line 35
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 35, $this->source); })()), "id", [], "any", false, false, false, 35)]), "html", null, true);
+    <a class=\"mr3\" href=\"";
+        // line 37
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 37, $this->source); })()), "id", [], "any", false, false, false, 37)]), "html", null, true);
         echo "\">Editar</a>
 
     ";
-        // line 37
+        // line 39
         echo twig_include($this->env, $context, "posts_crud/_delete_form.html.twig");
         echo "
+      </div>
+            </div>
+        </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -162,7 +167,7 @@ class __TwigTemplate_cd089278cfa1bcf3733c5851ef0c098e21537fc457c579339ce90c0a267
 
     public function getDebugInfo()
     {
-        return array (  142 => 37,  137 => 35,  132 => 33,  124 => 28,  117 => 24,  110 => 20,  103 => 16,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  144 => 39,  139 => 37,  134 => 35,  126 => 30,  119 => 26,  112 => 22,  105 => 18,  98 => 14,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -173,7 +178,9 @@ class __TwigTemplate_cd089278cfa1bcf3733c5851ef0c098e21537fc457c579339ce90c0a267
 
 {% block body %}
     <h1>Posts</h1>
-
+<div class=\"container h-100\">
+        <div class=\"row h-100 justify-content-center align-items-center\">
+            <div class=\"col-12 bg-white rounded my-3 p-5\">
     <table class=\"table\">
         <tbody>
             <tr>
@@ -199,12 +206,15 @@ class __TwigTemplate_cd089278cfa1bcf3733c5851ef0c098e21537fc457c579339ce90c0a267
         </tbody>
     </table>
 
-    <a href=\"{{ path('app_posts_crud_index') }}\">Volver</a>
+    <a class=\"mr3\" href=\"{{ path('app_posts_crud_index') }}\">Volver</a>
 
-    <a href=\"{{ path('app_posts_crud_edit', {'id': post.id}) }}\">Editar</a>
+    <a class=\"mr3\" href=\"{{ path('app_posts_crud_edit', {'id': post.id}) }}\">Editar</a>
 
     {{ include('posts_crud/_delete_form.html.twig') }}
+      </div>
+            </div>
+        </div>
 {% endblock %}
-", "posts_crud/show.html.twig", "/var/www/html/symfony/templates/posts_crud/show.html.twig");
+", "posts_crud/show.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/posts_crud/show.html.twig");
     }
 }

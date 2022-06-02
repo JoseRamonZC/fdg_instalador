@@ -133,6 +133,6 @@ class __TwigTemplate_c4ff7c9ea231d6d56bcae71ee3c3cbdacf08317b98cf54d6e6e4ebffb4a
 
     <a href=\"{{ path('app_user_crud_index') }}\">Volver</a>
 {% endblock %}
-", "user_crud/new.html.twig", "/var/www/html/symfony/templates/user_crud/new.html.twig");
+", "user_crud/new.html.twig", "/var/www/html/fdg_instalador/proyecto/templates/user_crud/new.html.twig");
     }
 }
