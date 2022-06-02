@@ -121,4 +121,13 @@ footer{
     text-decoration: underline;
 }
 
+.enviar{
+    color: #ffffff;
+    background-color:#1347a7;
+    border: 0px solid black !important;
+    width: 85px;
+    height: 45px;
+    border-radius: 3px;
+}
+
 
