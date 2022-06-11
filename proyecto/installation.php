@@ -16,7 +16,7 @@ $env = '
 # https://symfony.com/doc/current/best_practices.html#use-environment-variables-for-infrastructure-configuration
 
 ###> symfony/framework-bundle ###
-APP_ENV=dev
+APP_ENV=prod
 APP_SECRET=2e37e84be218b82612e256a3558283bc
 ###< symfony/framework-bundle ###
 
