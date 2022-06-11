@@ -24,7 +24,7 @@ class RegistroController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) { 
-            echo "<script>alert('¡Usuario creado!');</script>";
+            echo "<script>alert('¡Usuario creado. Se activará su cuneta en un periodo máximo de 24 horas!');</script>";
             $em = $doctrine->getManager();
             $hashedPassword = $passwordHasher->hashPassword($user, $user->getPassword());
             $user->setPassword($hashedPassword);

@@ -85,7 +85,10 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "    <h1>User index</h1>
+        echo "          <script src=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.min.js"), "html", null, true);
+        echo "\"></script>
+    <h1>User index</h1>
 <div class=\"container h-100\">
         <div class=\"row h-100 justify-content-center align-items-center\">
             <div class=\"col-12 bg-white rounded my-3 p-5\">
@@ -102,49 +105,98 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
         </thead>
         <tbody>
         ";
-        // line 22
+        // line 23
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 22, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 23, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 23
+            // line 24
             echo "            <tr>
                 <td>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 24), "html", null, true);
-            echo "</td>
-                <td>";
             // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 25), "html", null, true);
             echo "</td>
                 <td>";
             // line 26
-            ((twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 26)) ? (print (twig_escape_filter($this->env, json_encode(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 26)), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 26), "html", null, true);
             echo "</td>
                 <td>";
             // line 27
-            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "baneado", [], "any", false, false, false, 27)) ? ("Yes") : ("No"));
+            ((twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 27)) ? (print (twig_escape_filter($this->env, json_encode(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 27)), "html", null, true))) : (print ("")));
             echo "</td>
                 <td>";
             // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nombre", [], "any", false, false, false, 28), "html", null, true);
+            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "baneado", [], "any", false, false, false, 28)) ? ("Yes") : ("No"));
+            echo "</td>
+                <td>";
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "nombre", [], "any", false, false, false, 29), "html", null, true);
             echo "</td>
                 <td>
-                    <a href=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 30)]), "html", null, true);
-            echo "\">Ver</a>
-                    <a href=\"";
+                    ";
             // line 31
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 31)]), "html", null, true);
-            echo "\">Editar</a>
-                </td>
+            if ((twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 31) == "ROLE_USER_ACCEPT")) {
+                // line 32
+                echo "                    <a href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 32)]), "html", null, true);
+                echo "\">Ver</a>
+                    <a href=\"";
+                // line 33
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+                echo "\">Editar</a>
+
+                    ";
+            } else {
+                // line 36
+                echo "
+                    <a href=\"";
+                // line 37
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 37)]), "html", null, true);
+                echo "\">Ver</a>
+                    <a href=\"";
+                // line 38
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 38)]), "html", null, true);
+                echo "\">Editar</a>
+                    ";
+                // line 40
+                echo "                    <button id=\"accept-";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 40), "html", null, true);
+                echo "\">Aceptar</button>
+                    <script>
+                    \$(\"#accept-";
+                // line 42
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 42), "html", null, true);
+                echo "\").click( () => {
+                        \$.ajax({
+                            url: \"";
+                // line 44
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("api/confirmarUsuario.php"), "html", null, true);
+                echo "\",
+                            type: \"POST\",
+                            data: {user: ";
+                // line 46
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 46), "html", null, true);
+                echo "},
+                            success: function (e) {
+                                console.log(e)
+                            }, error: function (e) {
+                                console.log(e)
+                            }
+                            
+                        })
+                    })
+                    </script>
+
+                    ";
+            }
+            // line 58
+            echo "                </td>
             </tr>
         ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 35
+            // line 61
             echo "            <tr>
                 <td colspan=\"7\">No hay ningún usuario</td>
             </tr>
@@ -153,20 +205,20 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 65
         echo "        </tbody>
     </table>
 
     <a class=\"mr-3\" href=\"";
-        // line 42
+        // line 68
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dashboard");
         echo "\">Volver</a>
     <a class=\"mr-3\" href=\"";
-        // line 43
+        // line 69
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_new");
         echo "\">Crear</a>
     <a class=\"mr-3\" href=\"";
-        // line 44
+        // line 70
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_pdf");
         echo "\">Descargar PDF</a>
     </div>
@@ -193,7 +245,7 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
 
     public function getDebugInfo()
     {
-        return array (  170 => 44,  166 => 43,  162 => 42,  157 => 39,  148 => 35,  139 => 31,  135 => 30,  130 => 28,  126 => 27,  122 => 26,  118 => 25,  114 => 24,  111 => 23,  106 => 22,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  222 => 70,  218 => 69,  214 => 68,  209 => 65,  200 => 61,  193 => 58,  178 => 46,  173 => 44,  168 => 42,  162 => 40,  158 => 38,  154 => 37,  151 => 36,  145 => 33,  140 => 32,  138 => 31,  133 => 29,  129 => 28,  125 => 27,  121 => 26,  117 => 25,  114 => 24,  109 => 23,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -203,6 +255,7 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
 {% block title %}User index{% endblock %}
 
 {% block body %}
+          <script src=\"{{ asset('js/jquery.min.js') }}\"></script>
     <h1>User index</h1>
 <div class=\"container h-100\">
         <div class=\"row h-100 justify-content-center align-items-center\">
@@ -227,8 +280,33 @@ class __TwigTemplate_d4c88aef9e0772424feb92915a1f1d081d81994a94f9c85b74e465b86bf
                 <td>{{ user.baneado ? 'Yes' : 'No' }}</td>
                 <td>{{ user.nombre }}</td>
                 <td>
+                    {% if user.roles == 'ROLE_USER_ACCEPT' %}
                     <a href=\"{{ path('app_user_crud_show', {'id': user.id}) }}\">Ver</a>
                     <a href=\"{{ path('app_user_crud_edit', {'id': user.id}) }}\">Editar</a>
+
+                    {% else %}
+
+                    <a href=\"{{ path('app_user_crud_show', {'id': user.id}) }}\">Ver</a>
+                    <a href=\"{{ path('app_user_crud_edit', {'id': user.id}) }}\">Editar</a>
+                    {# <a href= onclick = 'confirmar()', {'id': user.id}>Aceptar</a> #}
+                    <button id=\"accept-{{ user.id }}\">Aceptar</button>
+                    <script>
+                    \$(\"#accept-{{ user.id }}\").click( () => {
+                        \$.ajax({
+                            url: \"{{asset('api/confirmarUsuario.php')}}\",
+                            type: \"POST\",
+                            data: {user: {{user.id}}},
+                            success: function (e) {
+                                console.log(e)
+                            }, error: function (e) {
+                                console.log(e)
+                            }
+                            
+                        })
+                    })
+                    </script>
+
+                    {% endif %}
                 </td>
             </tr>
         {% else %}

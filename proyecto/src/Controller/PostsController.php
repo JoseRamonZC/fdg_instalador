@@ -28,7 +28,7 @@ class PostsController extends AbstractController
         $form->handleRequest($request);
         
         if ($form->isSubmitted() && $form->isValid()) { 
-            echo "<script>alert('Post creado!');</script>";
+            echo "<script>alert('¡Post creado!');</script>";
                 $brochureFile = $form['foto']->getData();
                 if ($brochureFile) {
                     $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);

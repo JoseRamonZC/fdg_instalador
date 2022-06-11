@@ -51,6 +51,10 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface{
         
     }
 
+    public function confirmar(){
+        $this->roles = ['ROLE_USER_ACCEPT'];
+    }
+
     public function getId(): ?int
     {
         return $this->id;

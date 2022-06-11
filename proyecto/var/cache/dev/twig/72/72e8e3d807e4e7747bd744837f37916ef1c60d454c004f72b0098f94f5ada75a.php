@@ -63,7 +63,7 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
       ";
         // line 15
         $this->displayBlock('body', $context, $blocks);
-        // line 66
+        // line 64
         echo "        <footer>
         Página de práctica I.E.S. Leopoldo Queipo
       </footer>
@@ -188,57 +188,54 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
 
                 ";
             // line 41
-            echo "
-                  
-                    <a href=\"";
-            // line 43
+            echo "                    <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\"><button class=\"boton-nav nv mr-3\">Logout</button></a>
                   ";
         } else {
-            // line 45
+            // line 43
             echo "                    <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"><button class=\"boton-nav nv mr-3\">Login</button></a>
                     <a href=\"";
-            // line 46
+            // line 44
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_registro");
             echo "\"><button class=\"boton-nav nv mr-3\">Registrate</button></a>
                   ";
         }
-        // line 48
+        // line 46
         echo "
                 ";
-        // line 50
+        // line 48
         echo "                
                 ";
-        // line 51
+        // line 49
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 52
+            // line 50
             echo "                  <div class=\"btn-group\" role=\"group\">
                       <a href=\"";
-            // line 53
+            // line 51
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_posts_crud_index");
             echo "\"><button class=\"boton-nav nv mr-3\">Posts</button></a>
                       <a href=\"";
-            // line 54
+            // line 52
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_crud_index");
             echo "\"><button class=\"boton-nav nv mr-3\">Usuarios</button></a>
                         ";
-            // line 57
+            // line 55
             echo "                  </div>
                 ";
         }
-        // line 59
+        // line 57
         echo "            </div>
           </div>
         </nav> 
           <script src=\"";
-        // line 62
+        // line 60
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"></script>
           <script src=\"";
-        // line 63
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bootstrap/js/bootstrap.js"), "html", null, true);
         echo "\"></script>
         
@@ -258,7 +255,7 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
 
     public function getDebugInfo()
     {
-        return array (  242 => 63,  238 => 62,  233 => 59,  229 => 57,  225 => 54,  221 => 53,  218 => 52,  216 => 51,  213 => 50,  210 => 48,  205 => 46,  200 => 45,  195 => 43,  191 => 41,  187 => 38,  181 => 36,  175 => 34,  173 => 33,  169 => 31,  163 => 29,  157 => 27,  154 => 26,  152 => 25,  142 => 18,  138 => 16,  128 => 15,  116 => 10,  111 => 9,  101 => 8,  82 => 5,  67 => 66,  65 => 15,  60 => 12,  57 => 8,  52 => 5,  46 => 1,);
+        return array (  239 => 61,  235 => 60,  230 => 57,  226 => 55,  222 => 52,  218 => 51,  215 => 50,  213 => 49,  210 => 48,  207 => 46,  202 => 44,  197 => 43,  191 => 41,  187 => 38,  181 => 36,  175 => 34,  173 => 33,  169 => 31,  163 => 29,  157 => 27,  154 => 26,  152 => 25,  142 => 18,  138 => 16,  128 => 15,  116 => 10,  111 => 9,  101 => 8,  82 => 5,  67 => 64,  65 => 15,  60 => 12,  57 => 8,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -303,8 +300,6 @@ class __TwigTemplate_c1b3a8c979516d297ae30ecc48b2dad5d16a2dea5e11ec13b53c6b34c51
                 </li>
 
                 {# Comprobamos que el usuario este registrado #}
-
-                  
                     <a href=\"{{ path('app_logout') }}\"><button class=\"boton-nav nv mr-3\">Logout</button></a>
                   {% else %}
                     <a href=\"{{ path('app_login') }}\"><button class=\"boton-nav nv mr-3\">Login</button></a>

@@ -46,11 +46,37 @@ DATABASE_URL="mysql://%DB-USER%:%DB-PASSWORD%@127.0.0.1:3306/%DB-NAME%?serverVer
 
 ';
 
+$api_confirmarUser = '
+<?php
+try {
+    $database = "%api_confirmarUser_DATABASE%";
+    $user = "%api_confirmarUser_USER%";
+    $pass = "%api_confirmarUser_PASS%";
+  
+    $url = "mysql:host=127.0.0.1;dbname=$database";
+    $cx = new PDO($url, $user, $pass);
+  
+    $cx->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+  
+    $sql = "UPDATE user SET roles = \'[\"ROLE_USER_ACCEPT\"]\' where id = ".$_POST[\'user\'];
+    $cx->exec( $sql );
+    echo "\nSUCCESS!\n";
+  }
+  catch (PDOException $e) {
+    die( "Error: " . $e->getMessage() . "\n" );
+  }
+';
+
 $env = str_replace("%DB-USER%", $_POST["DB-USER"], $env);
 $env = str_replace("%DB-PASSWORD%", $_POST["DB-PASSWORD"], $env);
 $env = str_replace("%DB-NAME%", $_POST["DB-NAME"], $env);
 
+$api_confirmarUser = str_replace("%api_confirmarUser_DATABASE%", $_POST["DB-NAME"], $api_confirmarUser);
+$api_confirmarUser = str_replace("%api_confirmarUser_USER%", $_POST["DB-USER"], $api_confirmarUser);
+$api_confirmarUser = str_replace("%api_confirmarUser_PASS%", $_POST["DB-PASSWORD"], $api_confirmarUser);
+
 file_put_contents(".env", $env);
+file_put_contents("public/api/confirmarUsuario.php", $api_confirmarUser);
 
 try {
     $url = "mysql:host=127.0.0.1";

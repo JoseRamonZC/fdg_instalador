@@ -38,8 +38,6 @@
                 </li>
 
                 {# Comprobamos que el usuario este registrado #}
-
-                  
                     <a href="{{ path('app_logout') }}"><button class="boton-nav nv mr-3">Logout</button></a>
                   {% else %}
                     <a href="{{ path('app_login') }}"><button class="boton-nav nv mr-3">Login</button></a>
@@ -52,8 +50,6 @@
                   <div class="btn-group" role="group">
                       <a href="{{ path('app_posts_crud_index') }}"><button class="boton-nav nv mr-3">Posts</button></a>
                       <a href="{{ path('app_user_crud_index') }}"><button class="boton-nav nv mr-3">Usuarios</button></a>
-                        {# <button type="button" class="btn-primary ml-3" onclick="window.location.href='{{ path('app_posts_crud_index') }}'">Posts</button>
-                        <button type="button" class="btn-primary" onclick="window.location.href='{{ path('app_user_crud_index') }}'">Usuarios</button> #}
                   </div>
                 {% endif %}
             </div>
