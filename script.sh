@@ -4,8 +4,8 @@ clear
 if [ $USER == "root" ]; then
     if [ ! -d "/var/www/html/guitarron" ]; then
     echo "No se ha encontrado carpeta de guitarrón, carpeta creada"
-    sudo cp -r proyecto /var/www/html/guitarron
-    sudo chmod -R 777 /var/www/html/guitarron
+    sudo cp -r proyecto /var/www/html/guitarron /dev/null 2>&1
+    sudo chmod -R 777 /var/www/html/guitarron /dev/null 2>&1
     fi
 
     check=`which symfony`
@@ -14,8 +14,8 @@ if [ $USER == "root" ]; then
     else
     echo "No se ha encontrado Symfony, ejecutando instalación"
     echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | sudo tee /etc/apt/sources.list.d/symfony-cli.list
-    sudo apt update
-    sudo apt install symfony-cli
+    sudo apt update /dev/null 2>&1
+    sudo apt install symfony-cli /dev/null 2>&1
     fi
 
     check=`which composer`
@@ -25,7 +25,7 @@ if [ $USER == "root" ]; then
     echo "No se ha encontrado Composer, ejecutando instalación"
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-    php composer-setup.php
+    php composer-setup.php /dev/null 2>&1
     php -r "unlink('composer-setup.php');"
     fi
 
