@@ -99,6 +99,8 @@ catch (PDOException $e) {
 try {
     $conn->exec(file_get_contents('db.sql'));
     echo "<p>Estructura y admin importados<p>";
+    echo "<p>Correo: jose@gmail.com<p>";
+    echo "<p>Contraseña: 123456<p>";
     echo "<h3>Diríjase a IP: <a href=\"http://".$_SERVER['SERVER_NAME'].":8000/\">http://".$_SERVER['SERVER_NAME'].":8000/</a></h3>";
 }
 catch (PDOException $e) {
