@@ -14,7 +14,7 @@ if [ $USER == "root" ]; then
     else
     echo "No se ha encontrado Symfony, ejecutando instalación"
     echo 'deb [trusted=yes] https://repo.symfony.com/apt/ /' | sudo tee /etc/apt/sources.list.d/symfony-cli.list
-    sudo apt update /dev/null 2>&1
+    sudo apt update
     sudo apt install symfony-cli /dev/null 2>&1
     fi
 
